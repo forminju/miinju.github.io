@@ -159,34 +159,41 @@ html[data-theme="dark"] .publications ol.bibliography li .abbr abbr {
   }
 }
 
-/* 13. Social section rabbit */
+/* 13. Profile rabbits */
 @keyframes rabbit-float {
   0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-5px); }
+  50%       { transform: translateY(-6px); }
 }
 
-.social-with-rabbit {
+@keyframes rabbit-float-delayed {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+.profile-rabbits {
   display: flex;
-  align-items: flex-end;
-  gap: 1.5rem;
-}
-
-.social-left {
-  flex: 1;
-}
-
-.social-rabbit {
-  img {
-    width: 80px;
-    height: auto;
-    animation: rabbit-float 3s ease-in-out infinite;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
-    display: block;
-  }
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
 
   @media (max-width: 576px) {
     display: none;
   }
+}
+
+.profile-rabbit {
+  width: 52px;
+  height: auto;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
+}
+
+.rabbit-1 {
+  animation: rabbit-float 3s ease-in-out infinite;
+}
+
+.rabbit-2 {
+  animation: rabbit-float-delayed 3s ease-in-out infinite;
+  animation-delay: 0.8s;
 }
 
 /* 14. Fade-in animation */

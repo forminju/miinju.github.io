@@ -35,6 +35,10 @@ layout: default
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
+        <div class="profile-rabbits">
+          <img src="{{ '/assets/img/me/nobg/vi_rabbit.png' | relative_url }}" alt="" class="profile-rabbit rabbit-1" />
+          <img src="{{ '/assets/img/me/nobg/think_rabbit.png' | relative_url }}" alt="" class="profile-rabbit rabbit-2" />
+        </div>
       </div>
     {% endif %}
 
@@ -66,14 +70,9 @@ layout: default
 
     <!-- Social -->
     {% if page.social %}
-      <div class="social social-with-rabbit">
-        <div class="social-left">
-          <div class="contact-icons">{% social_links %}</div>
-          <div class="contact-note">{{ site.contact_note }}</div>
-        </div>
-        <div class="social-rabbit">
-          <img src="{{ '/assets/img/me/nobg/study_rabbit.png' | relative_url }}" alt="rabbit" />
-        </div>
+      <div class="social">
+        <div class="contact-icons">{% social_links %}</div>
+        <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     {% endif %}
 
