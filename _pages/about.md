@@ -2,17 +2,19 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href="https://www.hanyang.ac.kr/" target="_blank">Hanyang University</a>. AI Researcher.
+# 주소나 링크가 들어가는 부분은 따옴표로 감싸는 게 안전해요!
+subtitle: "<a href='https://www.hanyang.ac.kr/' target='_blank'>Hanyang University</a>. AI Researcher."
 
 profile:
   align: right
-  image: 5026-15-1-01.jpg
+  # 이미지 파일명이 숫자로 시작하면 따옴표로 감싸주는 것이 좋습니다.
+  image: "5026-15-1-01.jpg"
   image_circular: false
   more_info: >
     <p>Naver Cloud, Voice Tech Team</p>
     <p>Seongnam-si, Gyeonggi-do, Republic of Korea</p>
 
-selected_papers: true # papers.bib에서 selected={true}로 설정한 논문 노출
+selected_papers: true
 social: true
 ---
 
