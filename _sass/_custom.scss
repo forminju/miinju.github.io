@@ -138,13 +138,13 @@ abbr {
 }
 
 /* venue badge in publication list */
-ol.bibliography li .abbr abbr {
+.publications ol.bibliography li .abbr abbr {
   background-color: rgba(0, 87, 255, 0.07) !important;
   color: var(--global-theme-color) !important;
 }
 
 html[data-theme="dark"] abbr,
-html[data-theme="dark"] ol.bibliography li .abbr abbr {
+html[data-theme="dark"] .publications ol.bibliography li .abbr abbr {
   background-color: rgba(77, 142, 255, 0.12) !important;
   color: var(--global-theme-color) !important;
 }
