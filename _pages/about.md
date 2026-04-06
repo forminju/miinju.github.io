@@ -12,32 +12,26 @@ selected_papers: true
 social: true
 ---
 
+<div class="fade-in" style="--delay: 0s">
+
 Hi, I'm **MinJu Jeon** — a Master's student in Data Science at Hanyang University, currently a Research Intern at **Naver Cloud** (Voice Tech Team).
 
 I work on problems at the intersection of language and perception: multilingual speech (G2P/TTS), video-language understanding, and the messy data work that makes models actually usable in production. I care a lot about the gap between "it works in the paper" and "it works in the real world."
 
-<div class="interests mt-3 mb-4">
-  <span class="badge pb-1 px-2 border-0">Multimodal Learning</span>
-  <span class="badge pb-1 px-2 border-0">Video-Text Retrieval</span>
-  <span class="badge pb-1 px-2 border-0">Speech & Language</span>
-  <span class="badge pb-1 px-2 border-0">Data-Centric AI</span>
 </div>
 
-<style>
-  .badge {
-    background-color: var(--global-theme-color);
-    color: white !important;
-    border-radius: 5px;
-    margin-right: 5px;
-    font-size: 0.85rem;
-  }
-</style>
+<div class="fade-in interests mt-3 mb-4" style="--delay: 0.15s">
+  <span class="badge">Multimodal Learning</span>
+  <span class="badge">Video-Text Retrieval</span>
+  <span class="badge">Speech & Language</span>
+  <span class="badge">Data-Centric AI</span>
+</div>
 
 ---
 
 ### News
 
-<div class="news-list">
+<div class="news-list fade-in" style="--delay: 0.3s">
   <div class="news-item"><span class="news-date">Mar 2026</span><span class="news-text"><strong>Cap4Bridge</strong> accepted at <strong>IEEE Access</strong></span></div>
   <div class="news-item"><span class="news-date">Feb 2026</span><span class="news-text">Two papers accepted at <strong>CVPR 2026</strong></span></div>
   <div class="news-item"><span class="news-date">Jan 2026</span><span class="news-text">Started research internship at <strong>Naver Cloud</strong>, Voice Tech Team</span></div>
@@ -75,7 +69,7 @@ I work on problems at the intersection of language and perception: multilingual 
 
 ### Background
 
-<div class="timeline">
+<div class="timeline fade-in" style="--delay: 0.45s">
   <div class="tl-item">
     <div class="tl-left">2026 – now</div>
     <div class="tl-right"><strong>Research Intern</strong>, Naver Cloud · Voice Tech Team<br><span class="tl-sub">Multilingual G2P & robust TTS for non-canonical text</span></div>

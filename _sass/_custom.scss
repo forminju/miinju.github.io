@@ -1,66 +1,202 @@
 /* ============================================================
-   Omni-modal 민주 전용 커스텀 디자인 (Haein님 스타일 참조)
+   MinJu Jeon — Haein-inspired design
    ============================================================ */
 
-/* 1. 포인트 컬러 설정 (Haein Navy) */
+/* 1. Color & selection */
 :root {
-  --global-theme-color: #003d7c;    // 메인 테마 색 (아이콘, 굵은 글씨 등)
-  --global-hover-color: #0056b3;    // 마우스 올렸을 때 색
+  --global-theme-color: #0057ff;
+  --global-hover-color: #0040cc;
+  --global-text-color: #1a1a1a;
+  --global-text-color-light: #667085;
+  --global-divider-color: rgba(0, 0, 0, 0.07);
 }
 
-/* 2. 폰트 세련되게 (Google Font Inter 적용 가정) */
+::selection {
+  background-color: #0057ff;
+  color: #fff;
+}
+
+/* 2. Base typography */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-  color: #333; // 글자 색을 살짝 부드럽게
-  line-height: 1.7; // Haein님처럼 줄 간격을 넓게 (가독성 UP)
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif !important;
+  background-color: #fff;
+  color: #1a1a1a;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* 3. 프로필 이미지 스타일 (Haein님 스타일 완벽 재현) */
-.profile {
-  margin-top: 1rem; // Haein님처럼 살짝 아래로
-  
-  img {
-    max-width: 260px; // Haein님 같은 적당한 사이즈
-    height: auto;
-    border-radius: 12px; // Haein님처럼 부드럽게
-    box-shadow: 0 4px 15px rgba(0,0,0,0.06); // Haein님 은은한 그림자
-    transition: all 0.3s ease; // 터치감
-  }
-
-  // 마우스 올렸을 때 효과 (도파민!)
-  img:hover {
-    transform: translateY(-5px); // Haein님처럼 떠오름
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  }
+/* 3. Navbar — glass effect */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: none !important;
 }
 
-/* 4. 섹션 간격 및 헤더 스타일 (Haein님 스타일) */
-#about {
-  // Biography 본문
-  .post-content {
-    margin-right: 3rem; // Haein Navy처럼 텍스트와 사진 사이 시원한 여백
-  }
+.navbar-brand,
+.nav-link {
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  color: #1a1a1a !important;
 
-  // Biography 제목 볼드 해제
-  h1 {
-    font-weight: 500;
-  }
-
-  // 중간 제목들 (Biography, Education, News 등)
-  h2 {
-    font-weight: 600;
-    margin-top: 3rem; // Haein Navy처럼 섹션 위에 시원한 여백
-    margin-bottom: 1.5rem;
-    color: var(--global-theme-color); // 제목에 포인트 컬러 적용
-  }
-}
-
-/* 5. 링크 스타일 (Haein Navy 적용) */
-a:not(.badge) {
-  color: var(--global-theme-color);
-  text-decoration: none;
   &:hover {
-    color: var(--global-hover-color);
+    color: #0057ff !important;
+  }
+
+  &.active {
+    color: #0057ff !important;
+    font-weight: 600;
+  }
+}
+
+/* 4. About page — post title (name) */
+.post-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.desc {
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 0.1rem;
+}
+
+/* 5. Profile image */
+.profile {
+  margin-top: 0.5rem;
+
+  img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* 6. Section headings in about */
+.post h3 {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 7. Research interest badges */
+.badge {
+  background-color: rgba(0, 87, 255, 0.07) !important;
+  color: #0057ff !important;
+  border-radius: 6px !important;
+  font-weight: 500;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.65rem !important;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+/* 8. Links */
+a:not(.btn):not(.nav-link):not(.navbar-brand):not(.social-icon) {
+  color: #0057ff;
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: #0040cc;
     text-decoration: underline;
+  }
+}
+
+/* 9. HR dividers — subtle */
+hr {
+  border-color: rgba(0, 0, 0, 0.07) !important;
+  margin: 2rem 0;
+}
+
+/* 10. News list */
+.news-date {
+  color: #0057ff !important;
+}
+
+/* 11. Timeline */
+.tl-left {
+  color: #0057ff !important;
+}
+
+/* 12. Footer — minimal */
+footer.fixed-bottom,
+footer.sticky-bottom,
+footer {
+  background-color: #fff !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+
+  a,
+  p,
+  span {
+    color: #aaa !important;
+    font-size: 0.8rem;
+  }
+
+  a:hover {
+    color: #0057ff !important;
+  }
+}
+
+/* 13. Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+  transition-delay: var(--delay, 0s);
+}
+
+.fade-in--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 14. Selected publications card */
+.publication {
+  border: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-radius: 0 !important;
+  padding: 1.2rem 0 !important;
+}
+
+/* 15. Abbr badge on publications */
+abbr {
+  background-color: rgba(0, 87, 255, 0.07);
+  color: #0057ff;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none !important;
+  border: none !important;
+}
+
+/* 16. Social icons */
+.social a {
+  color: #555 !important;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: #0057ff !important;
   }
 }
