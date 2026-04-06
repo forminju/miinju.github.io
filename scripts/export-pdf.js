@@ -22,7 +22,7 @@ const getArg = (flag, def) => {
 };
 
 const BASE_URL = getArg("--url", "https://forminju.github.io");
-const OUT_FILE = getArg("--out", "portfolio.pdf");
+const OUT_FILE = getArg("--out", "assets/pdf/MinJu_Jeon_Portfolio.pdf");
 
 const PAGES = [
   { path: "/", label: "About" },
