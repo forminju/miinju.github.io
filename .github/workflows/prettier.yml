@@ -3,27 +3,29 @@ name: Prettier Auto-Format
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
+
+# 봇에게 코드를 쓸 수 있는 권한을 명시적으로 줍니다.
+permissions:
+  contents: write
 
 jobs:
   prettier:
     runs-on: ubuntu-latest
+    env:
+      # 2026년 환경에 맞춰 Node.js 24를 강제로 사용하도록 설정합니다.
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          # 자동 커밋을 위해 권한이 필요합니다.
           fetch-depth: 0
-          ref: ${{ github.head_ref }}
 
       - name: Prettier Auto-Fix
-        # 지적만 하는 게 아니라 직접 수정해서 다시 올려주는 액션입니다.
         uses: creyD/prettier_action@v4.3
         with:
-          # 수정할 파일 확장자를 정합니다. (yml, md 등)
-          prettier_options: --write **/*.{yml,md}
-          commit_message: "style: 🎨 auto-format with Prettier"
+          # 지적만 하지 말고 직접 수정(--write)하게 합니다.
+          prettier_options: --write **/*.{yml,md,html,css,js}
+          commit_message: "style: 🎨 auto-format by prettier robot"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
