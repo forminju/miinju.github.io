@@ -138,23 +138,9 @@ hr {
   color: #0057ff !important;
 }
 
-/* 12. Footer — minimal */
-footer.fixed-bottom,
-footer.sticky-bottom,
+/* 12. Footer — keep default dark background, just tighten style */
 footer {
-  background-color: #fff !important;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-
-  a,
-  p,
-  span {
-    color: #aaa !important;
-    font-size: 0.8rem;
-  }
-
-  a:hover {
-    color: #0057ff !important;
-  }
+  font-size: 0.8rem;
 }
 
 /* 13. Fade-in animation */
