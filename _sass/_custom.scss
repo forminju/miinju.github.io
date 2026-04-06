@@ -160,38 +160,45 @@ html[data-theme="dark"] .publications ol.bibliography li .abbr abbr {
 }
 
 /* 13. Rabbit mascot — cursor follower */
+@keyframes rabbit-float {
+  0%, 100% { margin-top: 0; }
+  50%       { margin-top: -5px; }
+}
+
+@keyframes rabbit-bounce-in {
+  0%   { transform: scale(0.7); }
+  60%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
 #rabbit-mascot {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
   pointer-events: none;
-  width: 90px;
+  width: 88px;
   will-change: transform;
 
   @media (max-width: 768px) {
-    display: none; // 모바일은 숨김 (터치라 의미 없음)
+    display: none;
   }
 }
 
 #rabbit-img {
   width: 100%;
   height: auto;
-  mix-blend-mode: multiply;
   opacity: 0;
-  transition: opacity 0.4s ease;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.12));
+  transition: opacity 0.35s ease, transform 0.12s ease;
+  animation: rabbit-float 3s ease-in-out infinite;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18));
 
   &.rabbit-visible {
     opacity: 1;
   }
-}
 
-html[data-theme="dark"] #rabbit-img {
-  mix-blend-mode: normal;
-
-  &.rabbit-visible {
-    opacity: 0.88;
+  &.rabbit-bounce {
+    animation: rabbit-bounce-in 0.45s ease forwards;
   }
 }
 
