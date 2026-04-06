@@ -1,80 +1,80 @@
-// Alive cursor-following rabbit mascot
+// Cursor-following rabbit mascot
 (function () {
   const BASE = "/assets/img/me/nobg/";
-  const POSES = {
-    default:      BASE + "vi_rabbit.png",
-    news:         BASE + "suprise_rabbit.png",
-    background:   BASE + "think_rabbit.png",
-    publications: BASE + "study_rabbit.png",
+
+  // Page-based default pose
+  const path = window.location.pathname;
+  let defaultPose = "vi_rabbit.png";
+  if (path.includes("/publications")) defaultPose = "study_rabbit.png";
+  else if (path.includes("/projects"))   defaultPose = "think_rabbit.png";
+  else if (path.includes("/cv"))         defaultPose = "suprise_rabbit.png";
+
+  // About page scroll poses
+  const SCROLL_POSES = {
+    ".news-list":    "suprise_rabbit.png",
+    ".timeline":     "think_rabbit.png",
+    ".publications": "study_rabbit.png",
+    ".post-title":   "vi_rabbit.png",
   };
 
-  const rabbit = document.createElement("div");
-  rabbit.id = "rabbit-mascot";
-  rabbit.innerHTML = `<img id="rabbit-img" src="${POSES.default}" alt="" />`;
-  document.body.appendChild(rabbit);
+  // Build element
+  const el = document.createElement("div");
+  el.id = "rabbit-mascot";
+  el.innerHTML = `<img id="rabbit-img" src="${BASE + defaultPose}" alt="" />`;
+  document.body.appendChild(el);
 
   const img = document.getElementById("rabbit-img");
 
-  // Smooth follow
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
-  let curX = mouseX, curY = mouseY;
-  let velX = 0, velY = 0;
-  let prevX = mouseX;
+  // Smooth follow — tight & fast
+  let tx = -200, ty = -200;
+  let cx = tx,   cy = ty;
 
   document.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+    tx = e.clientX;
+    ty = e.clientY;
   });
 
-  function animate() {
-    const EASE = 0.09;
-    velX = (mouseX - curX) * EASE;
-    velY = (mouseY - curY) * EASE;
-    curX += velX;
-    curY += velY;
+  let prevX = tx;
+  function loop() {
+    const EASE = 0.22; // faster follow
+    cx += (tx - cx) * EASE;
+    cy += (ty - cy) * EASE;
 
-    // Tilt based on horizontal velocity
-    const tilt = Math.max(-18, Math.min(18, velX * 2.5));
+    const vx = cx - prevX;
+    const tilt = Math.max(-14, Math.min(14, vx * 2));
+    const flip = vx < -0.5 ? -1 : 1;
 
-    rabbit.style.transform = `translate(${curX + 14}px, ${curY + 14}px)`;
-    img.style.transform = `rotate(${tilt}deg) scaleX(${velX < -1 ? -1 : 1})`;
+    // Offset: slightly below-right of cursor tip
+    el.style.transform = `translate(${cx + 10}px, ${cy + 10}px)`;
+    img.style.transform = `scaleX(${flip}) rotate(${tilt * flip}deg)`;
 
-    prevX = curX;
-    requestAnimationFrame(animate);
+    prevX = cx;
+    requestAnimationFrame(loop);
   }
 
-  setTimeout(() => {
-    img.classList.add("rabbit-visible");
-    animate();
-  }, 500);
+  setTimeout(() => { img.classList.add("rabbit-visible"); loop(); }, 300);
 
-  // Pose switching on scroll
-  let currentPose = "default";
+  // Scroll pose switching (about page only)
+  let current = defaultPose;
 
   function setPose(pose) {
-    if (currentPose === pose) return;
-    currentPose = pose;
+    if (current === pose) return;
+    current = pose;
     img.classList.remove("rabbit-visible");
-    img.classList.add("rabbit-bounce");
     setTimeout(() => {
-      img.src = POSES[pose];
+      img.src = BASE + pose;
       img.classList.add("rabbit-visible");
-    }, 160);
-    setTimeout(() => img.classList.remove("rabbit-bounce"), 500);
+    }, 120);
   }
 
-  [
-    { selector: ".news-list",    pose: "news" },
-    { selector: ".timeline",    pose: "background" },
-    { selector: ".publications", pose: "publications" },
-    { selector: ".post-title",  pose: "default" },
-  ].forEach(({ selector, pose }) => {
-    const el = document.querySelector(selector);
-    if (!el) return;
-    new IntersectionObserver(
-      (entries) => entries.forEach((e) => { if (e.isIntersecting) setPose(pose); }),
-      { threshold: 0.3 }
-    ).observe(el);
-  });
+  if (path === "/" || path === "/index.html" || path === "") {
+    Object.entries(SCROLL_POSES).forEach(([selector, pose]) => {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      new IntersectionObserver(
+        (entries) => entries.forEach((e) => { if (e.isIntersecting) setPose(pose); }),
+        { threshold: 0.4 }
+      ).observe(el);
+    });
+  }
 })();

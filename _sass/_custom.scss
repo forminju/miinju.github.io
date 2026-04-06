@@ -161,14 +161,8 @@ html[data-theme="dark"] .publications ol.bibliography li .abbr abbr {
 
 /* 13. Rabbit mascot — cursor follower */
 @keyframes rabbit-float {
-  0%, 100% { margin-top: 0; }
-  50%       { margin-top: -5px; }
-}
-
-@keyframes rabbit-bounce-in {
-  0%   { transform: scale(0.7); }
-  60%  { transform: scale(1.15); }
-  100% { transform: scale(1); }
+  0%, 100% { margin-top: 0px; }
+  50%       { margin-top: -3px; }
 }
 
 #rabbit-mascot {
@@ -177,7 +171,7 @@ html[data-theme="dark"] .publications ol.bibliography li .abbr abbr {
   left: 0;
   z-index: 9999;
   pointer-events: none;
-  width: 88px;
+  width: 44px;
   will-change: transform;
 
   @media (max-width: 768px) {
@@ -189,16 +183,13 @@ html[data-theme="dark"] .publications ol.bibliography li .abbr abbr {
   width: 100%;
   height: auto;
   opacity: 0;
-  transition: opacity 0.35s ease, transform 0.12s ease;
-  animation: rabbit-float 3s ease-in-out infinite;
-  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18));
+  transition: opacity 0.3s ease;
+  animation: rabbit-float 2.5s ease-in-out infinite;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+  transform-origin: bottom center;
 
   &.rabbit-visible {
     opacity: 1;
-  }
-
-  &.rabbit-bounce {
-    animation: rabbit-bounce-in 0.45s ease forwards;
   }
 }
 
