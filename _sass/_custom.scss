@@ -69,7 +69,6 @@ body {
 /* 6. Profile image */
 .profile {
   margin-top: 0.5rem;
-  position: relative;
 
   img.img-fluid {
     max-width: 200px;
@@ -78,8 +77,6 @@ body {
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    position: relative;
-    z-index: 1;
   }
 
   img.img-fluid:hover {
@@ -162,41 +159,42 @@ html[data-theme="dark"] .publications ol.bibliography li .abbr abbr {
   }
 }
 
-/* 13. Profile rabbits — peeking behind profile photo */
-@keyframes rabbit-peek-left {
-  0%, 100% { transform: translateY(0px) rotate(-5deg); }
-  50%       { transform: translateY(-5px) rotate(-5deg); }
+/* 13. Profile rabbits — small characters below profile photo */
+@keyframes rabbit-bob-1 {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-5px); }
 }
 
-@keyframes rabbit-peek-right {
-  0%, 100% { transform: translateY(0px) scaleX(-1) rotate(-8deg); }
-  50%       { transform: translateY(-7px) scaleX(-1) rotate(-8deg); }
+@keyframes rabbit-bob-2 {
+  0%, 100% { transform: translateY(0px) scaleX(-1); }
+  50%       { transform: translateY(-5px) scaleX(-1); }
 }
 
-.profile-rabbit {
-  position: absolute;
-  z-index: 0;
-  width: 60px;
-  height: auto;
-  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.15));
-  pointer-events: none;
+.profile-rabbits {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
 
   @media (max-width: 576px) {
     display: none;
   }
 }
 
+.profile-rabbit {
+  width: 40px;
+  height: auto;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+  pointer-events: none;
+}
+
 .rabbit-peek-left {
-  bottom: -10px;
-  left: -18px;
-  animation: rabbit-peek-left 3.2s ease-in-out infinite;
+  animation: rabbit-bob-1 3s ease-in-out infinite;
 }
 
 .rabbit-peek-right {
-  bottom: -5px;
-  right: -22px;
-  animation: rabbit-peek-right 3.2s ease-in-out infinite;
-  animation-delay: 0.9s;
+  animation: rabbit-bob-2 3s ease-in-out infinite;
+  animation-delay: 0.8s;
 }
 
 /* 14. Fade-in animation */
