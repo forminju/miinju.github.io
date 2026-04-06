@@ -69,20 +69,17 @@ body {
 /* 6. Profile image */
 .profile {
   margin-top: 0.5rem;
-  position: relative;
 
-  img.img-fluid {
+  img {
     max-width: 200px;
     width: 100%;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    position: relative;
-    z-index: 1;
   }
 
-  img.img-fluid:hover {
+  img:hover {
     transform: scale(1.02);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   }
@@ -162,42 +159,6 @@ html[data-theme="dark"] .publications ol.bibliography li .abbr abbr {
   }
 }
 
-/* 13. Profile rabbits — tiny, peeking from top behind profile photo */
-@keyframes rabbit-bob-1 {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-4px); }
-}
-
-@keyframes rabbit-bob-2 {
-  0%, 100% { transform: translateY(0px) scaleX(-1); }
-  50%       { transform: translateY(-4px) scaleX(-1); }
-}
-
-.profile-rabbit {
-  position: absolute;
-  width: 15px;
-  height: auto;
-  z-index: 0;
-  pointer-events: none;
-  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.15));
-
-  @media (max-width: 576px) {
-    display: none;
-  }
-}
-
-.rabbit-peek-left {
-  top: -14px;
-  left: 18px;
-  animation: rabbit-bob-1 3s ease-in-out infinite;
-}
-
-.rabbit-peek-right {
-  top: -10px;
-  left: 50px;
-  animation: rabbit-bob-2 3s ease-in-out infinite;
-  animation-delay: 0.8s;
-}
 
 /* 14. Fade-in animation */
 .fade-in {
