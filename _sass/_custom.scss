@@ -159,37 +159,33 @@ html[data-theme="dark"] .publications ol.bibliography li .abbr abbr {
   }
 }
 
-/* 13. Rabbit mascot — cursor follower */
+/* 13. Social section rabbit */
 @keyframes rabbit-float {
-  0%, 100% { margin-top: 0px; }
-  50%       { margin-top: -3px; }
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-5px); }
 }
 
-#rabbit-mascot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  pointer-events: none;
-  width: 44px;
-  will-change: transform;
+.social-with-rabbit {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
 
-  @media (max-width: 768px) {
-    display: none;
+.social-left {
+  flex: 1;
+}
+
+.social-rabbit {
+  img {
+    width: 80px;
+    height: auto;
+    animation: rabbit-float 3s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+    display: block;
   }
-}
 
-#rabbit-img {
-  width: 100%;
-  height: auto;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  animation: rabbit-float 2.5s ease-in-out infinite;
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
-  transform-origin: bottom center;
-
-  &.rabbit-visible {
-    opacity: 1;
+  @media (max-width: 576px) {
+    display: none;
   }
 }
 
