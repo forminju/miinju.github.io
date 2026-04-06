@@ -14,4 +14,4 @@ Gemfile.lock
 node_modules/
 vendor/
 *.pdf
-!assets/pdf/
+!assets/pdf/**
