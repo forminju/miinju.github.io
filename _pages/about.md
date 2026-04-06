@@ -2,55 +2,58 @@
 layout: about
 title: about
 permalink: /
-subtitle: Master's Student in Data Science | Research Intern @ Naver Cloud (Voice Tech)
+subtitle: <a href="https://www.hanyang.ac.kr/" target="_blank">Hanyang University</a>. AI Researcher.
 
 profile:
   align: right
-  image: 5026-15-1-01.jpg # assets/img/ 폴더에 본인 사진을 이 이름으로 저장하세요!
-  image_circular: false # 원형 사진을 원하시면 true로 바꾸세요
+  image: 5026-15-1-01.jpg
+  image_circular: false
   more_info: >
     <p>Naver Cloud, Voice Tech Team</p>
-    <p>Seongnam-si, Gyeonggi-do, South Korea</p>
+    <p>Seongnam-si, Gyeonggi-do, Republic of Korea</p>
 
-selected_papers: true # papers.bib에서 selected={true}로 표시한 논문들이 자동으로 노출됩니다.
-social: true # 하단에 SNS 아이콘을 표시합니다.
-
-announcements:
-  enabled: true
-  scrollable: true
-  limit: 5
-
-latest_posts:
-  enabled: true
-  scrollable: true
-  limit: 3
+selected_papers: true # papers.bib에서 selected={true}로 설정한 논문 노출
+social: true
 ---
 
-## Biography
+## **Biography** 📝
 
-AI researcher with hands-on experience in large-scale multimodal model training and data-centric optimization. My work spans vision-language pre-training, post-training refinement (data curation, synthetic caption generation, retrieval-augmented learning), and production deployment of multimodal systems.
+Hi, I'm **MinJu Jeon**, a Master's student in Data Science at **Hanyang University**. I am an **AI Researcher** with hands-on experience in **large-scale multimodal model training** and **data-centric optimization**.
+
+My work focuses on the entire lifecycle of multimodal intelligence, from **vision-language pre-training (VLP)** to **post-training refinement**, including data curation, synthetic caption generation, and retrieval-augmented learning. Currently, I am a **Research Intern** at **Naver Cloud (Voice Tech Team)**, where I focus on building robust **multilingual G2P (Grapheme-to-Phoneme)** models for TTS services, specifically addressing the challenges of **non-canonical and unrefined text**.
+
+I strive to bridge the gap between rigorous academic research and **production-level deployment**, ensuring that AI systems are not only high-performing but also practically impactful in real-world environments.
 
 ---
 
-## Research Interests
-* **Multimodal Learning**: Text-Video Retrieval, Dense Video Captioning.
-* **Computer Vision**: Scene Understanding, Sign-Language Video Retrieval.
-* **Speech Synthesis**: Multilingual G2P, Robust TTS for non-canonical text.
+## **Research Interests** 🔍
+* **Multimodal Learning**: Video-Text Retrieval, Dense Video Captioning, and Cross-modal Contextualization.
+* **Speech & Language**: Multilingual G2P, Robust TTS for non-canonical text, and Grapheme-to-Phoneme modeling.
+* **Data-Centric AI**: Large-scale data curation, Synthetic data generation, and Post-training optimization.
 
 ---
 
-## News
+## **News** 📌
 * **[Mar. 2026]** 🎉 My paper **"Cap4Bridge"** has been accepted for publication in **IEEE Access**!
 * **[Feb. 2026]** 🚀 Excited to share that **two papers** I co-authored were accepted at **CVPR 2026**.
-* **[Jan. 2026]** Started a research internship at **Naver Cloud** (Voice Tech Team).
-* **[Aug. 2025]** My paper  **"Sali4Vid"** has been accpeted at **EMNLP 2025 (Long, Main)**.
+* **[Jan. 2026]** 💼 Started a research internship at **Naver Cloud** (Voice Tech Team).
+* **[Aug. 2025]** 🔥 My paper **"Sali4Vid"** has been accepted at **EMNLP 2025 (Long, Main)**.
 
 ---
 
-## Education
-* **Master's in Data Science**, Hanyang University (Present)
-* **Bachelor's in Industrial Engineering**, Hanyang University
+## **Experience** 💼
+* **Research Intern**, Naver Cloud (Voice Tech Team), *Jan. 2026 – Present*
+  * Developing high-performance **multilingual G2P models** for TTS services.
+  * Researching robust modeling techniques for **non-canonical text** and unrefined data.
 
 ---
 
-이곳은 저의 연구 여정을 기록하는 공간입니다. 연구 협업이나 궁금한 점이 있다면 언제든 아래의 연락처로 문의해 주세요!
+## **Education** 🎓
+* **M.S. in Data Science**, Hanyang University, *Mar. 2025 – Present*
+* **B.S. in Industrial Engineering**, Hanyang University, *Feb. 2025*
+
+---
+
+<br>
+
+> Feel free to reach out for collaborations or any inquiries regarding my research! ✉️
