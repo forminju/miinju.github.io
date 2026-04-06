@@ -1,6 +1,14 @@
 {
+  "scripts": {
+    "export-pdf": "node scripts/export-pdf.js",
+    "export-pdf:local": "node scripts/export-pdf.js --url http://localhost:8080"
+  },
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "^1.10.0",
     "prettier": "^3.8.0"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^22.0.0"
   }
 }
