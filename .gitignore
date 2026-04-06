@@ -12,5 +12,6 @@ assets/libs/
 assets/rendercv/rendercv_output/*.typ
 Gemfile.lock
 node_modules/
-vendorportfolio.pdf
-node_modules/
+vendor/
+*.pdf
+!assets/pdf/
