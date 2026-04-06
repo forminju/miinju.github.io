@@ -127,7 +127,7 @@ hr {
 /* 11. Abbr badge on publications */
 abbr {
   background-color: rgba(0, 87, 255, 0.07);
-  color: var(--global-theme-color);
+  color: var(--global-theme-color) !important;
   border-radius: 4px;
   padding: 2px 7px;
   font-size: 0.75rem;
@@ -137,8 +137,16 @@ abbr {
   border: none !important;
 }
 
-html[data-theme="dark"] abbr {
-  background-color: rgba(77, 142, 255, 0.12);
+/* venue badge in publication list */
+ol.bibliography li .abbr abbr {
+  background-color: rgba(0, 87, 255, 0.07) !important;
+  color: var(--global-theme-color) !important;
+}
+
+html[data-theme="dark"] abbr,
+html[data-theme="dark"] ol.bibliography li .abbr abbr {
+  background-color: rgba(77, 142, 255, 0.12) !important;
+  color: var(--global-theme-color) !important;
 }
 
 /* 12. Social icons */
