@@ -6,7 +6,7 @@ subtitle: "<a href='https://www.hanyang.ac.kr/' target='_blank'>Hanyang Universi
 
 profile:
   align: right
-  image: "minju.jpg"
+  image: "profile_rabbit.png"
   image_circular: false
 selected_papers: true
 social: true
