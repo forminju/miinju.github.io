@@ -1,39 +1,43 @@
 /* ============================================================
-   MinJu Jeon — Haein-inspired design
+   MinJu Jeon — Haein-inspired design (dark mode compatible)
    ============================================================ */
 
-/* 1. Color & selection */
+/* 1. Color — light mode only */
 :root {
   --global-theme-color: #0057ff;
   --global-hover-color: #0040cc;
-  --global-text-color: #1a1a1a;
-  --global-text-color-light: #667085;
   --global-divider-color: rgba(0, 0, 0, 0.07);
 }
 
+/* 1b. Dark mode accent */
+html[data-theme="dark"] {
+  --global-theme-color: #4d8eff;
+  --global-hover-color: #6fa3ff;
+  --global-divider-color: rgba(255, 255, 255, 0.08);
+}
+
+/* 2. Selection */
 ::selection {
   background-color: #0057ff;
   color: #fff;
 }
 
-/* 2. Base typography */
+/* 3. Base typography — use CSS vars, no hardcoded colors */
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif !important;
-  background-color: #fff;
-  color: #1a1a1a;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 3. Navbar — glass effect */
+/* 4. Navbar */
 .navbar {
-  background-color: rgba(255, 255, 255, 0.92) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
   box-shadow: none !important;
+  border-bottom: 1px solid var(--global-divider-color) !important;
+  background-color: color-mix(in srgb, var(--global-bg-color) 92%, transparent) !important;
 }
 
 .navbar-brand,
@@ -41,34 +45,28 @@ body {
   font-weight: 500;
   font-size: 0.9rem;
   letter-spacing: 0.01em;
-  color: #1a1a1a !important;
-
-  &:hover {
-    color: #0057ff !important;
-  }
 
   &.active {
-    color: #0057ff !important;
+    color: var(--global-theme-color) !important;
     font-weight: 600;
   }
 }
 
-/* 4. About page — post title (name) */
+/* 5. Post title */
 .post-title {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #1a1a1a;
 }
 
 .desc {
-  color: #555;
   font-size: 0.9rem;
   font-weight: 400;
   margin-top: 0.1rem;
+  color: var(--global-text-color-light);
 }
 
-/* 5. Profile image */
+/* 6. Profile image */
 .profile {
   margin-top: 0.5rem;
 
@@ -83,25 +81,25 @@ body {
 
   img:hover {
     transform: scale(1.02);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   }
 }
 
-/* 6. Section headings in about */
+/* 7. Section headings in about */
 .post h3 {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #888;
+  color: var(--global-text-color-light);
   margin-top: 2.5rem;
   margin-bottom: 1rem;
 }
 
-/* 7. Research interest badges */
+/* 8. Research interest badges */
 .badge {
   background-color: rgba(0, 87, 255, 0.07) !important;
-  color: #0057ff !important;
+  color: var(--global-theme-color) !important;
   border-radius: 6px !important;
   font-weight: 500;
   font-size: 0.8rem;
@@ -110,37 +108,47 @@ body {
   margin-bottom: 6px;
 }
 
-/* 8. Links */
-a:not(.btn):not(.nav-link):not(.navbar-brand):not(.social-icon) {
-  color: #0057ff;
-  text-decoration: none;
-  transition: color 0.15s ease;
-
-  &:hover {
-    color: #0040cc;
-    text-decoration: underline;
-  }
+html[data-theme="dark"] .badge {
+  background-color: rgba(77, 142, 255, 0.12) !important;
 }
 
-/* 9. HR dividers — subtle */
+/* 9. HR dividers */
 hr {
-  border-color: rgba(0, 0, 0, 0.07) !important;
+  border-color: var(--global-divider-color) !important;
   margin: 2rem 0;
 }
 
-/* 10. News list */
-.news-date {
-  color: #0057ff !important;
-}
-
-/* 11. Timeline */
+/* 10. News & Timeline accent */
+.news-date,
 .tl-left {
-  color: #0057ff !important;
+  color: var(--global-theme-color) !important;
 }
 
-/* 12. Footer — keep default dark background, just tighten style */
-footer {
-  font-size: 0.8rem;
+/* 11. Abbr badge on publications */
+abbr {
+  background-color: rgba(0, 87, 255, 0.07);
+  color: var(--global-theme-color);
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none !important;
+  border: none !important;
+}
+
+html[data-theme="dark"] abbr {
+  background-color: rgba(77, 142, 255, 0.12);
+}
+
+/* 12. Social icons */
+.social a {
+  color: var(--global-text-color-light) !important;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--global-theme-color) !important;
+  }
 }
 
 /* 13. Fade-in animation */
@@ -154,35 +162,4 @@ footer {
 .fade-in--visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* 14. Selected publications card */
-.publication {
-  border: none !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
-  border-radius: 0 !important;
-  padding: 1.2rem 0 !important;
-}
-
-/* 15. Abbr badge on publications */
-abbr {
-  background-color: rgba(0, 87, 255, 0.07);
-  color: #0057ff;
-  border-radius: 4px;
-  padding: 2px 7px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-decoration: none !important;
-  border: none !important;
-}
-
-/* 16. Social icons */
-.social a {
-  color: #555 !important;
-  transition: color 0.15s ease;
-
-  &:hover {
-    color: #0057ff !important;
-  }
 }
