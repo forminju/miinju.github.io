@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: "<a href='https://www.hanyang.ac.kr/' target='_blank'>Hanyang University</a> · AI Researcher"
+subtitle: "<a href='https://www.hanyang.ac.kr/' target='_blank'>Hanyang University</a> · <a href='https://sites.google.com/view/hyu-mm/home' target='_blank'>Multimodal AI Lab</a> · AI Researcher"
 
 profile:
   align: right
