@@ -8,7 +8,7 @@ subtitle: "<a href='https://www.hanyang.ac.kr/' target='_blank'>Hanyang Universi
 profile:
   align: right
   # 이미지 파일명이 숫자로 시작하면 따옴표로 감싸주는 것이 좋습니다.
-  image: "minju.jpg"
+  image: "minju.jpeg"
   image_circular: false
   more_info: >
     <p>Naver Cloud, Voice Tech Team</p>
