@@ -1,1 +1,149 @@
 cv:
+  name: MinJu Jeon
+  label: AI Researcher
+  email: mnju5026@naver.com
+  phone: "+82 010 8975 5026"
+  address:
+    city: Seoul
+    countryCode: KR
+
+  summary: >
+    AI researcher with hands-on experience in large-scale multimodal model training and data-centric optimization.
+    My work spans vision-language pre-training, post-training refinement (data curation, synthetic caption generation,
+    retrieval-augmented learning), and production deployment of multimodal systems.
+
+  social_networks:
+    - network: LinkedIn
+      username: minju36
+    - network: GitHub
+      username: forminju
+
+  sections:
+    Experience:
+      - company: NAVER Cloud
+        position: Research Intern, Voice Tech
+        location: Seongnam, South Korea
+        start_date: "2025-12"
+        end_date: present
+        highlights:
+          - Developed robust multilingual G2P model for noisy, non-standard inputs
+          - Built G2P benchmark for non-canonical words across KO, EN, and VI
+          - Analyzed user corpora to identify failure modes in standard G2P systems
+
+      - company: Hanyang Multi-Model AI Laboratory
+        position: Research Assistant
+        location: Seoul, South Korea
+        start_date: "2024-09"
+        end_date: present
+        highlights:
+          - Researching Saliency-Aware Video Reweighting and Retrieval-Augmented Learning for DVC
+          - Collaborated with Piaspace on industrial research projects for automated highlight extraction
+
+      - company: Hanyang Multi-Model AI Laboratory
+        position: Undergraduate Research Intern
+        location: Seoul, South Korea
+        start_date: "2023-03"
+        end_date: "2024-08"
+        highlights: []
+
+    Education:
+      - institution: Hanyang University
+        area: Data Science
+        studyType: M.S.
+        location: Seoul, South Korea
+        start_date: "2024"
+        end_date: "2026"
+        highlights:
+          - "Advisor: Dong-Jin Kim"
+
+      - institution: Hanyang University
+        area: Industrial Engineering, Big Data Science (Double Major)
+        studyType: B.S.
+        location: Seoul, South Korea
+        start_date: "2020"
+        end_date: "2024"
+        highlights: []
+
+    Publications:
+      - title: "Sali4Vid: Saliency-Aware Video Reweighting and Adaptive Caption Retrieval for Dense Video Captioning"
+        authors: "MinJu Jeon, S.-W. Kim, Y.-C. Kim, H. Kim, Dong-Jin Kim"
+        venue: EMNLP 2025 (Long, Main)
+        year: 2025
+
+      - title: "Cap4Bridge: Caption-Guided Cross-Modal Contextualization with Stochastic Augmentation for Text-Video Retrieval"
+        authors: "MinJu Jeon, H. Kim, S.-W. Kim, Y. Oh, S. Lee, Dong-Jin Kim"
+        venue: "IEEE Access (IF: 3.6)"
+        year: 2026
+
+      - title: "Enhancing Lightweight Image Captioning with Localized Features and Keyword Extraction"
+        authors: "MinJu Jeon, S.-W. Kim, S. Lee, Dong-Jin Kim"
+        venue: Under Review
+        year: ""
+
+      - title: "Time-aware Video Frame Reweighting and Captioning Tool"
+        authors: "MinJu Jeon, et al."
+        venue: "Patent, Reg. No.: C-2025-058417"
+        year: 2025
+
+      - title: "Follow the Saliency: Supervised Saliency for Retrieval-augmented Dense Video Captioning"
+        authors: "S.-H. Choi, MinJu Jeon, H. Oh, J. Lee, Dong-Jin Kim"
+        venue: CVPR 2026
+        year: 2026
+
+      - title: "SAIL: Similarity-Aware Guidance and Inter-Caption Augmentation-based Learning for Weakly-Supervised DVC"
+        authors: "Y.-C. Kim, S. Cha, S.-W. Kim, MinJu Jeon, H. Kim, Dong-Jin Kim"
+        venue: CVPR 2026
+        year: 2026
+
+      - title: "SynC: Synthetic Image Caption Dataset Refinement with One-to-many Mapping for Zero-shot Image Captioning"
+        authors: "S.-W. Kim, MinJu Jeon, Y.-C. Kim, S. Lee, T. Kim, Dong-Jin Kim"
+        venue: ACM MM 2025
+        year: 2025
+
+    Projects:
+      - name: Retrieval-Augmented Dense Video Captioning and QA System
+        date: "2025"
+        highlights:
+          - "Funded by Piaspace"
+          - Built an end-to-end pipeline for automated highlight extraction and dense captioning of long-form videos (1hr+)
+          - Developed a retrieval-augmented QA module enabling natural language queries over video content
+
+      - name: Risk State Prediction Model Using Construction Site Images
+        date: "2025"
+        highlights:
+          - "Funded by Doosan Enerbility"
+          - Developed a VLM-based risk-state prediction system fine-tuned to detect unsafe worker behavior and equipment hazards
+
+      - name: Zero-Shot Captioning for Driver Status Reporting Agents
+        date: "2024"
+        highlights:
+          - "Funded by Hyundai NGV"
+          - Proposed a zero-shot image captioning method for in-vehicle driver monitoring to generate natural language descriptions of driver states
+
+    Skills:
+      - label: Programming Languages
+        details: "Python, C++, SQL, Java, LaTeX"
+      - label: Frameworks & Libraries
+        details: "PyTorch, CUDA, FAISS"
+      - label: Tools & DevOps
+        details: "Git, Docker, Linux"
+      - label: Research Interests
+        details: "Large Multimodal Models, Vision-Language Training, Training Data Refinement"
+
+    Awards:
+      - title: Best Paper Award (Bronze)
+        date: "2025"
+        awarder: IEIE Summer Annual Conference
+      - title: Outstanding Poster Presentation Award
+        date: "2024"
+        awarder: IEIE Summer Annual Conference
+      - title: Bronze Prize
+        date: "2022"
+        awarder: "DACON AI Competition (Mandarin Orange Yield Prediction)"
+
+    References:
+      - name: Dong-Jin Kim
+        relation: Thesis Advisor
+        highlights:
+          - "Assistant Professor, Department of Data Science, Hanyang University"
+          - "Email: djkim.hanyang@gmail.com"
