@@ -2,33 +2,21 @@
 layout: about
 title: about
 permalink: /
-# 주소나 링크가 들어가는 부분은 따옴표로 감싸는 게 안전해요!
-subtitle: "<a href='https://www.hanyang.ac.kr/' target='_blank'>Hanyang University</a>. AI Researcher."
+subtitle: "<a href='https://www.hanyang.ac.kr/' target='_blank'>Hanyang University</a> · AI Researcher"
 
 profile:
   align: right
   image: "minju.jpg"
   image_circular: false
-  # more_info: >
-  #   <p>Naver Cloud, Voice Tech Team</p>
-  #   <p>Seongnam-si, Gyeonggi-do, Republic of Korea</p>
 selected_papers: true
 social: true
 ---
 
-## **Biography** 📝
+Hi, I'm **MinJu Jeon** — a Master's student in Data Science at Hanyang University, currently a Research Intern at **Naver Cloud** (Voice Tech Team).
 
-Hi, I'm **MinJu Jeon**, a Master's student in Data Science at **Hanyang University**. I am an **AI Researcher** with hands-on experience in **large-scale multimodal model training** and **data-centric optimization**.
-<!-- 
-My work focuses on the entire lifecycle of multimodal intelligence, from **vision-language pre-training (VLP)** to **post-training refinement**, including data curation, synthetic caption generation, and retrieval-augmented learning. Currently, I am a **Research Intern** at **Naver Cloud (Voice Tech Team)**, where I focus on building robust **multilingual G2P (Grapheme-to-Phoneme)** models for TTS services, specifically addressing the challenges of **non-canonical and unrefined text**. -->
+I work on problems at the intersection of language and perception: multilingual speech (G2P/TTS), video-language understanding, and the messy data work that makes models actually usable in production. I care a lot about the gap between "it works in the paper" and "it works in the real world."
 
-<!-- I strive to bridge the gap between rigorous academic research and **production-level deployment**, ensuring that AI systems are not only high-performing but also practically impactful in real-world environments. -->
-
----
-
-## **Research Interests** 🔍
-
-<div class="interests">
+<div class="interests mt-3 mb-4">
   <span class="badge pb-1 px-2 border-0">Multimodal Learning</span>
   <span class="badge pb-1 px-2 border-0">Video-Text Retrieval</span>
   <span class="badge pb-1 px-2 border-0">Speech & Language</span>
@@ -37,42 +25,98 @@ My work focuses on the entire lifecycle of multimodal intelligence, from **visio
 
 <style>
   .badge {
-    background-color: var(--global-theme-color); /* 테마 색상 적용 */
+    background-color: var(--global-theme-color);
     color: white !important;
     border-radius: 5px;
     margin-right: 5px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 </style>
-<!-- 
-## **Research Interests** 🔍
-* **Multimodal Learning**: Video-Text Retrieval, Dense Video Captioning, and Cross-modal Contextualization.
-* **Speech & Language**: Multilingual G2P, Robust TTS for non-canonical text, and Grapheme-to-Phoneme modeling.
-* **Data-Centric AI**: Large-scale data curation, Synthetic data generation, and Post-training optimization. -->
 
 ---
 
-## **News** 📌
-* **[Mar. 2026]** My paper **"Cap4Bridge"** has been accepted for publication in **IEEE Access**!
-* **[Feb. 2026]** Excited to share that **two papers** I co-authored were accepted at **CVPR 2026**.
-* **[Jan. 2026]** Started a research internship at **Naver Cloud** (Voice Tech Team).
-* **[Aug. 2025]** My paper **"Sali4Vid"** has been accepted at **EMNLP 2025 (Long, Main)**.
+### News
+
+<div class="news-list">
+  <div class="news-item"><span class="news-date">Mar 2026</span><span class="news-text"><strong>Cap4Bridge</strong> accepted at <strong>IEEE Access</strong></span></div>
+  <div class="news-item"><span class="news-date">Feb 2026</span><span class="news-text">Two papers accepted at <strong>CVPR 2026</strong></span></div>
+  <div class="news-item"><span class="news-date">Jan 2026</span><span class="news-text">Started research internship at <strong>Naver Cloud</strong>, Voice Tech Team</span></div>
+  <div class="news-item"><span class="news-date">Aug 2025</span><span class="news-text"><strong>Sali4Vid</strong> accepted at <strong>EMNLP 2025</strong> (Long, Main)</span></div>
+</div>
+
+<style>
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-top: 0.75rem;
+  }
+  .news-item {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    font-size: 0.92rem;
+  }
+  .news-date {
+    color: var(--global-theme-color);
+    font-weight: 600;
+    white-space: nowrap;
+    min-width: 5.5rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+  }
+  .news-text {
+    color: var(--global-text-color);
+    line-height: 1.5;
+  }
+</style>
 
 ---
 
-## **Experience** 💼
-* **Research Intern**, Naver Cloud (Voice Tech Team), *Jan. 2026 – Present*
-  * Developing high-performance **multilingual G2P models** for TTS services.
-  * Researching robust modeling techniques for **non-canonical text** and unrefined data.
+### Background
 
----
+<div class="timeline">
+  <div class="tl-item">
+    <div class="tl-left">2026 – now</div>
+    <div class="tl-right"><strong>Research Intern</strong>, Naver Cloud · Voice Tech Team<br><span class="tl-sub">Multilingual G2P & robust TTS for non-canonical text</span></div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-left">2025 – now</div>
+    <div class="tl-right"><strong>M.S. Data Science</strong>, Hanyang University</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-left">– 2025</div>
+    <div class="tl-right"><strong>B.S. Industrial Engineering</strong>, Hanyang University</div>
+  </div>
+</div>
 
-## **Education** 🎓
-* **M.S. in Data Science**, Hanyang University, *Mar. 2025 – Present*
-* **B.S. in Industrial Engineering**, Hanyang University, *Feb. 2025*
-
----
-
-<br>
-
-> Feel free to reach out for collaborations or any inquiries regarding my research! ✉️
+<style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-top: 0.75rem;
+  }
+  .tl-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .tl-left {
+    min-width: 6rem;
+    color: var(--global-theme-color);
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+    padding-top: 0.15rem;
+    white-space: nowrap;
+  }
+  .tl-right {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+  .tl-sub {
+    font-size: 0.82rem;
+    color: var(--global-text-color-light, #888);
+  }
+</style>
