@@ -32,7 +32,7 @@ I work on problems at the intersection of language and perception: multilingual 
 ### News
 
 <div class="news-list fade-in" style="--delay: 0.3s">
-  <div class="news-item"><span class="news-date">Mar 2026</span><span class="news-text"><strong>Cap4Bridge</strong> accepted at <strong>IEEE Access</strong></span></div>
+  <div class="news-item"><span class="news-date">Mar 2026</span><span class="news-text"><strong>Cap4Bridge</strong> accepted at <strong>IEEE Access 2026</strong></span></div>
   <div class="news-item"><span class="news-date">Feb 2026</span><span class="news-text">Two papers accepted at <strong>CVPR 2026</strong></span></div>
   <div class="news-item"><span class="news-date">Dec 2025</span><span class="news-text">Started research internship at <strong>Naver Cloud</strong>, Voice Tech Team</span></div>
   <div class="news-item"><span class="news-date">Aug 2025</span><span class="news-text"><strong>Sali4Vid</strong> accepted at <strong>EMNLP 2025</strong> (Long, Main)</span></div>
