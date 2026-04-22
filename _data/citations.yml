@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-04-20'
+  last_updated: '2026-04-22'
 papers:
   FdinrVsAAAAJ:2osOgNQ5qMEC:
     citations: 3
@@ -13,12 +13,16 @@ papers:
     citations: 0
     title: 'SAIL: Similarity-Aware Guidance and Inter-Caption Augmentation-based Learning for Weakly-Supervised Dense Video Captioning'
     year: '2026'
+  FdinrVsAAAAJ:Tyk-4Ss8FVUC:
+    citations: 0
+    title: 'Cap4Bridge: Caption-Guided Cross-Modal Contextualization With Stochastic Augmentation for Text-Video Retrieval'
+    year: '2026'
   FdinrVsAAAAJ:qjMakFHDy7sC:
-    citations: 3
+    citations: 4
     title: 'Sali4Vid: Saliency-Aware Video Reweighting and Adaptive Caption Retrieval for Dense Video Captioning'
     year: '2025'
   FdinrVsAAAAJ:u-x6o8ySG0sC:
-    citations: 4
+    citations: 5
     title: 'SynC: Synthetic Image Caption Dataset Refinement with One-to-many Mapping for Zero-shot Image Captioning'
     year: '2025'
   FdinrVsAAAAJ:zYLM7Y9cAGgC:
