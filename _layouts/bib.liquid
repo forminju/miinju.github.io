@@ -1,6 +1,6 @@
 ---
 ---
-<div class="row">
+<div class="row publication-entry" data-categories="{{ entry.categories | default: '' | escape }}">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-3 abbr">
       {%- if entry.abbr -%}
@@ -186,6 +186,15 @@
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
+
+    {% if entry.categories %}
+      <div class="pub-categories">
+        {% assign cats = entry.categories | split: ',' %}
+        {% for cat in cats %}
+          <span class="pub-cat-chip">{{ cat | strip }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">

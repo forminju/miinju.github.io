@@ -20,10 +20,10 @@ I work on problems at the intersection of language and perception: multilingual 
 
 </div>
 
-<div class="fade-in interests mt-3 mb-4" style="--delay: 0.15s">
+<div class="fade-in interests" style="--delay: 0.15s">
   <span class="badge">Multimodal Learning</span>
   <span class="badge">Video-Text Retrieval</span>
-  <span class="badge">Speech & Language</span>
+  <span class="badge">Speech &amp; Language</span>
   <span class="badge">Data-Centric AI</span>
 </div>
 
@@ -38,7 +38,30 @@ I work on problems at the intersection of language and perception: multilingual 
   <div class="news-item"><span class="news-date">Aug 2025</span><span class="news-text"><strong>Sali4Vid</strong> accepted at <strong>EMNLP 2025</strong> (Long, Main)</span></div>
 </div>
 
+---
+
+### Background
+
+<div class="timeline fade-in" style="--delay: 0.45s">
+  <div class="tl-item">
+    <div class="tl-left">Dec 2025 – Present</div>
+    <div class="tl-right"><strong>Research Intern</strong>, Naver Cloud · Voice Tech Team<br><span class="tl-sub">Multilingual G2P &amp; robust TTS for non-canonical text</span></div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-left">Sep 2024 – Present</div>
+    <div class="tl-right"><strong>M.S. in Data Science</strong>, Hanyang University</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-left">Mar 2020 – Aug 2024</div>
+    <div class="tl-right"><strong>B.S. in Industrial Engineering</strong>, Hanyang University</div>
+  </div>
+</div>
+
 <style>
+  .interests {
+    margin: 1rem 0 1.5rem;
+  }
+
   .news-list {
     display: flex;
     flex-direction: column;
@@ -48,47 +71,27 @@ I work on problems at the intersection of language and perception: multilingual 
   .news-item {
     display: flex;
     align-items: baseline;
-    gap: 1rem;
+    gap: 1.1rem;
     font-size: 0.92rem;
   }
   .news-date {
     color: var(--global-theme-color);
     font-weight: 600;
     white-space: nowrap;
-    min-width: 5.5rem;
-    font-size: 0.82rem;
-    letter-spacing: 0.02em;
+    min-width: 5.25rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
   .news-text {
     color: var(--global-text-color);
-    line-height: 1.5;
+    line-height: 1.55;
   }
-</style>
 
----
-
-### Background
-
-<div class="timeline fade-in" style="--delay: 0.45s">
-  <div class="tl-item">
-    <div class="tl-left">Dec. 2025 – now</div>
-    <div class="tl-right"><strong>Research Intern</strong>, Naver Cloud · Voice Tech Team<br><span class="tl-sub">Multilingual G2P & robust TTS for non-canonical text</span></div>
-  </div>
-  <div class="tl-item">
-    <div class="tl-left">Sep. 2024 – now</div>
-    <div class="tl-right"><strong>M.S. Data Science</strong>, Hanyang University</div>
-  </div>
-  <div class="tl-item">
-    <div class="tl-left"> March 2020 - Aug. 2024 </div>
-    <div class="tl-right"><strong>B.S. Industrial Engineering</strong>, Hanyang University</div>
-  </div>
-</div>
-
-<style>
   .timeline {
     display: flex;
     flex-direction: column;
-    gap: 0.9rem;
+    gap: 0.95rem;
     margin-top: 0.75rem;
   }
   .tl-item {
@@ -97,12 +100,13 @@ I work on problems at the intersection of language and perception: multilingual 
     align-items: flex-start;
   }
   .tl-left {
-    min-width: 6rem;
+    min-width: 9.5rem;
     color: var(--global-theme-color);
     font-weight: 600;
-    font-size: 0.82rem;
-    letter-spacing: 0.02em;
-    padding-top: 0.15rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding-top: 0.2rem;
     white-space: nowrap;
   }
   .tl-right {
@@ -112,5 +116,17 @@ I work on problems at the intersection of language and perception: multilingual 
   .tl-sub {
     font-size: 0.82rem;
     color: var(--global-text-color-light, #888);
+  }
+
+  @media (max-width: 576px) {
+    .news-item,
+    .tl-item {
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+    .news-date,
+    .tl-left {
+      min-width: 0;
+    }
   }
 </style>

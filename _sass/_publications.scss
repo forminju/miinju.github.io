@@ -186,3 +186,56 @@
 .citation-number {
   color: var(--global-theme-color);
 }
+
+/* Category filter bar (publications page) */
+.pub-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.pub-filter-btn {
+  appearance: none;
+  background: transparent;
+  color: var(--global-text-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  padding: 0.22rem 0.8rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:hover {
+    color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+  }
+
+  &.is-active {
+    color: var(--global-card-bg-color);
+    background: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+  }
+}
+
+/* Per-entry category chips */
+.pub-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0.35rem 0 0.25rem;
+}
+
+.pub-cat-chip {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--global-theme-color);
+  background: color-mix(in srgb, var(--global-theme-color) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--global-theme-color) 25%, transparent);
+  border-radius: 4px;
+  padding: 0.08rem 0.45rem;
+  line-height: 1.4;
+}
