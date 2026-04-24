@@ -191,7 +191,8 @@
       <div class="pub-categories">
         {% assign cats = entry.categories | split: ',' %}
         {% for cat in cats %}
-          <span class="pub-cat-chip">{{ cat | strip }}</span>
+          {% assign cat_key = cat | strip | downcase | replace: ' ', '-' %}
+          <span class="pub-cat-chip" data-cat="{{ cat_key }}">{{ cat | strip }}</span>
         {% endfor %}
       </div>
     {% endif %}

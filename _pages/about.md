@@ -9,23 +9,21 @@ profile:
   image: "me/me.jpg"
   image_circular: false
 selected_papers: true
-social: true
+social: false
 ---
 
 <div class="fade-in" style="--delay: 0s">
 
-Hi, I'm MinJu Jeon — a Master's student in Data Science at Hanyang University, currently a Research Intern at Naver Cloud(Voice Tech).
+Hi! My name is MinJu Jeon. I am a Master's student in Data Science at <a href="https://www.hanyang.ac.kr/" target="_blank">Hanyang University</a>, advised by <a href="https://sites.google.com/view/hyu-mm/home" target="_blank">Prof. DongJin Kim</a>. I am currently a Research Intern at Naver Cloud, Voice Tech team.
 
-I work on problems at the intersection of language and perception: multilingual speech (G2P/TTS), video-language understanding, and the messy data work that makes models actually usable in production. 
+My research focuses on <span class="kw-multimodal"><span class="kw-icon">🖼️</span> vision-language modeling</span>, particularly <span class="kw-retrieval"><span class="kw-icon">🎬</span> video temporal understanding</span>. I am also interested in <span class="kw-speech"><span class="kw-icon">🗣️</span> multilingual speech</span> (G2P/TTS) and <span class="kw-datacentric"><span class="kw-icon">⚙️</span> data-centric ML</span> for building robust production systems.
 
 </div>
 
-<div class="fade-in interests" style="--delay: 0.15s">
-  <span class="badge">Multimodal Learning</span>
-  <span class="badge">Video-Text Retrieval</span>
-  <span class="badge">Speech &amp; Language</span>
-  <span class="badge">Data-Centric AI</span>
+<div class="social-inline fade-in" style="--delay: 0.1s">
+  <div class="contact-icons">{% social_links %}</div>
 </div>
+
 
 ---
 

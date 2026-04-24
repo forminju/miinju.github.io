@@ -1,9 +1,18 @@
 /*******************************************************************************
- * Publication and bibliography styles
+ * Publication and bibliography styles — yueyang1996-inspired
  ******************************************************************************/
 
 @use "variables" as v;
 
+/* ── Tag color palette (mirrors yueyang's CSS vars) ───────────────────── */
+:root {
+  --pub-color-dvc: #0891b2;
+  --pub-color-tvr: #7c3aed;
+  --pub-color-zsc: #059669;
+  --pub-color-dc:  #d97706;
+}
+
+/* ── Section wrapper ──────────────────────────────────────────────────── */
 .publications {
   margin-top: 2rem;
 
@@ -17,10 +26,7 @@
 
   h2 {
     margin-bottom: 1rem;
-
-    span {
-      font-size: 1.5rem;
-    }
+    span { font-size: 1.5rem; }
   }
 
   h2.bibliography {
@@ -31,33 +37,59 @@
     text-align: right;
   }
 
+  /* ── Card list ────────────────────────────────────────────────────── */
   ol.bibliography {
     list-style: none;
     padding: 0;
     margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 
     li {
-      margin-bottom: 1rem;
+      background: var(--global-card-bg-color);
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+      transition: box-shadow 0.3s ease;
+      margin-bottom: 0;
 
-      .preview {
-        display: inline-block;
+      &:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
       }
 
+      /* Fix Bootstrap row negative margin */
+      .publication-entry {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        align-items: stretch;
+      }
+
+      /* Thumbnail + venue badge column */
       .abbr {
-        margin-bottom: 0.5rem;
+        padding: 0.8rem 0.5rem 0.8rem 0.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
 
         abbr {
-          display: inline-block;
-          background-color: var(--global-theme-color);
-          margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
+          display: block;
+          background-color: transparent !important;
+          color: var(--global-theme-color) !important;
+          font-size: 0.7rem;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          text-align: center;
+          padding: 2px 6px;
+          border-radius: 4px;
+          border: 1px solid var(--global-theme-color) !important;
+          width: auto;
 
           a {
-            color: white;
-
-            &:hover {
-              text-decoration: none;
-            }
+            color: var(--global-theme-color);
+            &:hover { text-decoration: none; }
           }
         }
 
@@ -65,32 +97,57 @@
           color: var(--global-theme-color) !important;
           border: 1px solid var(--global-theme-color);
         }
+
+        .preview {
+          border-radius: 5px;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+          width: 100%;
+          display: block;
+        }
+      }
+
+      /* Content column */
+      .col-sm-7 {
+        padding: 0.85rem 0.85rem 0.85rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.12rem;
       }
 
       .title {
-        font-weight: bolder;
+        font-weight: 600;
+        font-size: 0.92rem;
+        line-height: 1.38;
+        color: var(--global-text-color);
+        margin-bottom: 0.1rem;
       }
 
       .author {
+        font-size: 0.84rem;
+        color: var(--global-text-color-light);
+        line-height: 1.45;
+
         a {
           border-bottom: 1px dashed var(--global-theme-color);
-
+          color: var(--global-text-color-light);
           &:hover {
             border-bottom-style: solid;
             text-decoration: none;
+            color: var(--global-theme-color);
           }
         }
 
         > em {
-          border-bottom: 1px solid;
+          border-bottom: 1px solid var(--global-text-color);
           font-style: normal;
+          color: var(--global-text-color);
+          font-weight: 600;
         }
 
         > span.more-authors {
           color: var(--global-text-color-light);
           border-bottom: 1px dashed var(--global-text-color-light);
           cursor: pointer;
-
           &:hover {
             color: var(--global-text-color);
             border-bottom: 1px dashed var(--global-text-color);
@@ -98,23 +155,44 @@
         }
       }
 
+      .periodical {
+        font-size: 0.84rem;
+        color: var(--global-text-color-light);
+        font-style: italic;
+        line-height: 1.4;
+      }
+
+      /* ── Link pill buttons ─────────────────────────────────────────── */
       .links {
+        margin-top: 0.4rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+
         a.btn {
+          background: color-mix(in srgb, var(--global-text-color) 7%, transparent);
+          border: none !important;
+          border-radius: 14px !important;
+          padding: 0.22rem 0.6rem !important;
+          font-size: 0.75rem;
+          font-weight: 500;
           color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
+          transition: all 0.2s ease;
+          box-shadow: none;
           margin-left: 0;
 
           &:hover {
-            color: var(--global-theme-color);
-            border-color: var(--global-theme-color);
+            background: #2563eb;
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+            text-decoration: none;
           }
         }
+
         a.award.btn {
-          border-color: var(--global-highlight-color);
+          color: var(--global-highlight-color);
+          &:hover { background: var(--global-highlight-color); color: white; }
         }
       }
 
@@ -126,10 +204,7 @@
           height: 100%;
           padding-right: 0.5rem;
           vertical-align: middle;
-
-          &:hover {
-            text-decoration: underline;
-          }
+          &:hover { text-decoration: underline; }
         }
       }
 
@@ -138,47 +213,30 @@
         max-height: 0px;
         overflow: hidden;
         text-align: justify;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
         transition: all 0.15s ease;
-
-        p {
-          line-height: 1.4em;
-          margin: 10px;
-        }
-
-        pre {
-          font-size: 1em;
-          line-height: 1.4em;
-          padding: 10px;
-        }
+        p { line-height: 1.4em; margin: 10px; }
+        pre { font-size: 1em; line-height: 1.4em; padding: 10px; }
       }
 
       .hidden.open {
         max-height: 100em;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
         transition: all 0.15s ease;
       }
 
-      div.abstract.hidden {
-        border: dashed 1px var(--global-bg-color);
-      }
+      div.abstract.hidden { border: dashed 1px var(--global-bg-color); }
+      div.abstract.hidden.open { border-color: var(--global-text-color); }
+    }
 
-      div.abstract.hidden.open {
-        border-color: var(--global-text-color);
-      }
-    }
-    div.award.hidden {
-      border: dashed 1px var(--global-bg-color);
-    }
-    div.award.hidden.open {
-      border-color: var(--global-highlight-color);
-    }
+    div.award.hidden { border: dashed 1px var(--global-bg-color); }
+    div.award.hidden.open { border-color: var(--global-highlight-color); }
+  }
+}
+
+html[data-theme="dark"] {
+  .publications ol.bibliography li {
+    border-color: #374151;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    &:hover { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
   }
 }
 
@@ -187,78 +245,108 @@
   color: var(--global-theme-color);
 }
 
-/* Category filter bar — segment control */
+/* ── Category filter — exact yueyang .tag-filters / .tag-btn style ───── */
 .pub-filter {
   display: flex;
-  background: color-mix(in srgb, var(--global-text-color) 6%, transparent);
-  border-radius: 10px;
-  padding: 3px;
-  gap: 2px;
-  margin: 1.25rem 0 0.75rem;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 1rem;
+  padding: 0;
+  background: none;
 }
 
 .pub-filter-btn {
   appearance: none;
-  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  border-radius: 20px;
+  border: 1.5px solid #9ca3af;
   background: transparent;
-  color: var(--global-text-color-light);
-  border: none;
-  border-radius: 7px;
-  padding: 0.28rem 0.85rem;
-  font-size: 0.78rem;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  line-height: 1.4;
+  color: #6b7280;
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, font-weight 0.1s ease;
+  transition: all 0.2s ease;
   white-space: nowrap;
+  line-height: 1.5;
 
-  &:hover {
-    color: var(--global-text-color);
-  }
+  &:hover { opacity: 0.85; }
 
   &.is-active {
-    background: var(--global-card-bg-color);
-    color: var(--global-theme-color);
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 0.5px rgba(0, 0, 0, 0.05);
+    background: #6b7280;
+    color: white;
+    border-color: #6b7280;
+  }
+
+  &[data-filter="Dense Video Captioning"] {
+    border-color: var(--pub-color-dvc);
+    color: var(--pub-color-dvc);
+    &:hover { background: var(--pub-color-dvc); color: white; opacity: 1; }
+    &.is-active { background: var(--pub-color-dvc); color: white; border-color: var(--pub-color-dvc); }
+  }
+
+  &[data-filter="Text-Video Retrieval"] {
+    border-color: var(--pub-color-tvr);
+    color: var(--pub-color-tvr);
+    &:hover { background: var(--pub-color-tvr); color: white; opacity: 1; }
+    &.is-active { background: var(--pub-color-tvr); color: white; border-color: var(--pub-color-tvr); }
+  }
+
+  &[data-filter="Zero-shot Captioning"] {
+    border-color: var(--pub-color-zsc);
+    color: var(--pub-color-zsc);
+    &:hover { background: var(--pub-color-zsc); color: white; opacity: 1; }
+    &.is-active { background: var(--pub-color-zsc); color: white; border-color: var(--pub-color-zsc); }
+  }
+
+  &[data-filter="Data-Centric"] {
+    border-color: var(--pub-color-dc);
+    color: var(--pub-color-dc);
+    &:hover { background: var(--pub-color-dc); color: white; opacity: 1; }
+    &.is-active { background: var(--pub-color-dc); color: white; border-color: var(--pub-color-dc); }
   }
 }
 
-/* Per-entry category chips — dot separator */
+html[data-theme="dark"] .pub-filter-btn {
+  opacity: 0.8;
+  &:hover { opacity: 1; }
+  &.is-active { opacity: 1; }
+}
+
+/* ── Per-entry category chips — yueyang .pub-tag style ───────────────── */
 .pub-categories {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0;
+  gap: 0.3rem;
   margin: 0.2rem 0 0.1rem;
 }
 
 .pub-cat-chip {
-  font-size: 0.68rem;
-  letter-spacing: 0.025em;
-  color: var(--global-text-color-light);
-  background: none;
-  border: none;
-  padding: 0;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.05rem 0.45rem;
+  border-radius: 8px;
   line-height: 1.5;
+  letter-spacing: 0.01em;
+  background: rgba(107, 114, 128, 0.1);
+  color: #6b7280;
 
-  &::after {
-    content: "·";
-    margin: 0 0.38em;
-    color: var(--global-theme-color);
-    opacity: 0.5;
+  &[data-cat="dense-video-captioning"] {
+    background: rgba(8, 145, 178, 0.1);
+    color: var(--pub-color-dvc);
   }
-
-  &:last-child::after {
-    display: none;
+  &[data-cat="text-video-retrieval"] {
+    background: rgba(124, 58, 237, 0.1);
+    color: var(--pub-color-tvr);
+  }
+  &[data-cat="zero-shot-captioning"] {
+    background: rgba(5, 150, 105, 0.1);
+    color: var(--pub-color-zsc);
+  }
+  &[data-cat="data-centric"] {
+    background: rgba(217, 119, 6, 0.1);
+    color: var(--pub-color-dc);
   }
 }
