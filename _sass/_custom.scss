@@ -276,6 +276,42 @@ hr {
   color: var(--global-text-color-light);
 }
 
+.tl-logo {
+  min-width: 80px;
+  width: 80px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 0.6rem;
+  margin-top: -5px;
+
+  img {
+    max-width: 80px;
+    max-height: 36px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.88;
+    transition: opacity 0.15s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.logo-round {
+      max-width: 40px;
+      max-height: 40px;
+    }
+  }
+}
+
+/* logos with dark text need inversion in dark mode */
+html[data-theme="dark"] .tl-logo img.logo-invert {
+  filter: invert(1) brightness(0.9);
+}
+
 @media (max-width: 576px) {
   .news-item,
   .tl-item {
@@ -294,6 +330,11 @@ hr {
 
   .news-date,
   .tl-left {
+    min-width: 0;
+  }
+
+  .tl-logo {
+    width: auto;
     min-width: 0;
   }
 }

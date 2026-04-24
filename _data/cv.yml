@@ -20,6 +20,14 @@ cv:
 
   sections:
     Experience:
+      - company: LG AI Research
+        position: Research Intern, EXAONE Lab (Incoming)
+        location: Seoul, South Korea
+        start_date: "2026-06"
+        end_date: present
+        highlights:
+          - Incoming research intern at LG AI Research EXAONE Lab
+
       - company: NAVER Cloud
         position: Research Intern, Voice Tech
         location: Seongnam, South Korea
